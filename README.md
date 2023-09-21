@@ -1,13 +1,16 @@
-- 👋 Hi, I’m @antmosmos
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+import hashlib
 
-<!---
-antmosmos/antmosmos is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+# Your text message
+message = "Hello, World!"
 
-print('hello, world!')
+# Create a SHA-256 hash object
+sha256 = hashlib.sha256()
 
+# Update the hash object with the message bytes
+sha256.update(message.encode('utf-8'))
+
+# Get the hexadecimal representation of the hash
+hashed_message = sha256.hexdigest()
+
+# Print the hashed message
+print("SHA-256 Hash:", hashed_message)
